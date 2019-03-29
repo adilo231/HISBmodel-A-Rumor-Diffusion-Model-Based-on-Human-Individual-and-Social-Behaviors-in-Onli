@@ -128,11 +128,7 @@ function [S,D,Q,Ne,RumorPopularity,NbrInfected,NbrSpreader] = ModelPropagationli
                                              send2=1;
                                          end
                             end
-                            
-                                 
-                         
-                    
-                            
+                                                       
                         end
             end
                 end
