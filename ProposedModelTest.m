@@ -24,17 +24,14 @@ load('TwitterDataf.mat');
 % NodeHe= (min)+(max)*rand(Nodes,1);
 
 %%Randome human factores
-%NodeFR= (pi()/24)+((pi())-(pi()/24))*rand(Nodes,1);
-%NodeDes=(0.2)+(1)*rand(Nodes,1);
-%NodeHe= (pi()/24)+((pi()/2)-(pi()/24))*rand(Nodes,1);
+%NodeFR= (pi()/24)+((pi())-(pi()/24))*rand(Nodes,1); Omega
+%NodeDes=(0.2)+(1)*rand(Nodes,1); Beta
+%NodeHe= (pi()/24)+((pi()/2)-(pi()/24))*rand(Nodes,1); Delta
 
 %IDSelectedNode= randperm(Nodes,5);
 
 test=1;%number of test
 step_time=0.125;
-
-% accept=cell(test,1);
-% send=cell(test,1);
 
 tic
 St=cell(test,1);
@@ -42,7 +39,6 @@ Dt=cell(test,1);
 Qt=cell(test,1);
 Net=cell(test,1);
 RumorPopularityt=cell(test,1);
-RumorPopularityt2=cell(test,1);
 NbrSpreaderst=cell(test,1);
 NbrInfectedt=cell(test,1);
 
