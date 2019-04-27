@@ -1,15 +1,18 @@
 clear;
 clc;
+
+%%load network, There are two networks  available in this project twitter and facebook.
 load('TwitterDataf.mat');
-%load network
 %load('TwitterData.mat');
 %load('facebook.mat');
 
-%Create Sythetic graph 
-%  Nodes=1000;
-%  ListGraph=random_graphList(Nodes);
+%Gerenrate Sythetic graph 
+%Nodes=1000;
+% ListGraph=random_graphList(Nodes);
+% More details about Barabási–Albert model read : https://en.wikipedia.org/wiki/Barab%C3%A1si%E2%80%93Albert_model
 %ListGraph=BAgraph_dir(Nodes,10,10);
-%ListGraph=WattsStrogatz(Nodes,Nodes*10,0.3);
+% More details about this network read : https://en.wikipedia.org/wiki/Watts%E2%80%93Strogatz_model
+%ListGraph=WattsStrogatz(Nodes,Nodes*10,0.3); 
 
 % for i =1:Nodes
 %   k=size(ListGraph{i,1});
@@ -73,7 +76,7 @@ l=size(R);
 x=0:1:l(1)-1;
 title('Rumor popularity')
 hold on
-plot(x, R,'DisplayName','Positive belive');
+plot(x, R,'DisplayName','Rumor popularity');
 
 
 
@@ -82,7 +85,7 @@ subplot(1,3,2)
 l=size(Sr);
 x=0:1:l(1)-1;
 hold on
-title('Rumor belivers')
+title('The impact of the rumor')
 plot(x, I,'DisplayName','Infetcted individuals');
 plot(x, Sp,'DisplayName','Spreders');
 
